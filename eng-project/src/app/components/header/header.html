@@ -2,7 +2,12 @@
 <header class="w-full border-b border-gray-200 bg-white">
   <div class="px-6 py-4">
     <div>
-      <h1 class="text-2xl font-bold text-orange-600">The Steel Calculator</h1>
+      <a routerLink=""
+        ><h1 class="text-2xl font-bold text-orange-600">
+          The Steel Calculator
+        </h1></a
+      >
+
       <p class="text-sm text-gray-500 -mt-1">Metal Structures Made Simple</p>
     </div>
 
@@ -10,31 +15,32 @@
     <nav class="mt-5">
       <ul class="flex flex-wrap gap-6 text-sm font-semibold text-gray-700">
         <li>
-          <a href="#" class="hover:text-orange-600 transition"
-            >Steel Structure Design Course</a
+          <a routerLink="contact" class="hover:text-orange-600 transition"
+            >Contact</a
           >
-        </li>
-        <li>
-          <a href="#" class="hover:text-orange-600 transition">Student Area</a>
-        </li>
-        <li>
-          <a href="#" class="hover:text-orange-600 transition"
-            >Free Downloads</a
-          >
-        </li>
-        <li><a href="#" class="hover:text-orange-600 transition">Blog</a></li>
-        <li>
-          <a href="#" class="hover:text-orange-600 transition">Contact</a>
         </li>
 
         <li class="relative">
-          <a href="#" class="hover:text-orange-600 transition"> Tools ▼ </a>
-        </li>
-
-        <li>
-          <a href="#" class="hover:text-orange-600 transition"
-            >Hire a Steel Designer</a
+          <button
+            (click)="isOpen = !isOpen"
+            class="font-semibold text-gray-700 hover:text-orange-600"
           >
+            Tools ▼
+          </button>
+
+          @if (isOpen) {
+          <div
+            class="absolute left-0 mt-2 w-40 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-20"
+          >
+            <a
+              routerLink="calculator-w"
+              class="block px-4 py-2 hover:bg-gray-100"
+              >W Calculator</a
+            >
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Beam Tools</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Downloads</a>
+          </div>
+          }
         </li>
       </ul>
     </nav>

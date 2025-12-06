@@ -1,0 +1,166 @@
+<body class="bg-gray-100">
+  <app-header></app-header>
+
+  <h1 class="text-center text-3xl font-bold mt-8 mb-6">
+    Resistance Calculator – W Profiles
+  </h1>
+
+  <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <!-- Left Panel -->
+    <div class="bg-white p-6 rounded-xl shadow-md col-span-2">
+      <!-- Image / Drawing -->
+      <div class="flex justify-center">
+        <img src="/img/perfil-w.png" alt="W profile diagram" class="h-52" />
+      </div>
+
+      <!-- Select Profile -->
+      <div class="mt-4">
+        <select class="w-full border border-gray-300 rounded-lg p-2">
+          <option>W 150 × 13.0</option>
+        </select>
+      </div>
+
+      <!-- Geometric Properties -->
+      <h2 class="mt-6 font-semibold text-lg">Geometric Properties</h2>
+
+      <div class="grid grid-cols-2 gap-4 mt-4">
+        <div class="border p-4 rounded-lg bg-gray-50">
+          <p><b>Designation:</b> W 150 × 13.0</p>
+          <p>m: 13 kg/m</p>
+          <p>d: 148 mm</p>
+          <p>bf: 100 mm</p>
+          <p>tw: 4.3 mm</p>
+          <p>tf: 4.9 mm</p>
+          <p>rd: 118 mm</p>
+          <p>rt: 2.6 cm</p>
+          <p>I₁: 1.72 cm⁴</p>
+          <p>Cw: 4181 cm⁶</p>
+        </div>
+
+        <div class="border p-4 rounded-lg bg-gray-50">
+          <p>A: 16.6 cm²</p>
+          <p>Ix: 635 cm⁴</p>
+          <p>Wx: 85.8 cm³</p>
+          <p>rx: 6.2 cm</p>
+          <p>Zx: 96.4 cm³</p>
+          <p>Iy: 82 cm⁴</p>
+          <p>Wy: 16.4 cm³</p>
+          <p>ry: 2.4 cm</p>
+          <p>Zy: 25.5 cm³</p>
+        </div>
+      </div>
+
+      <!-- Legal Notice -->
+      <p class="text-xs text-gray-700 mt-6">
+        Legal Notice: This tool is for educational purposes only. The user is
+        fully responsible for data input, analysis, and interpretation. We
+        recommend consulting a qualified structural engineer.
+      </p>
+
+      <p class="text-xs mt-2">
+        Developed by
+        <a href="#" class="text-blue-600 underline">Eng. Felipe Jacob</a>
+      </p>
+      <a
+        href="https://calculistadeaco.com.br/"
+        class="text-blue-500 underline text-xs mt-1 block"
+      >
+        https://calculistadeaco.com.br/
+      </a>
+    </div>
+
+    <!-- Right Panel -->
+    <div class="bg-white p-6 rounded-xl shadow-md">
+      <!-- Material -->
+      <h2 class="font-semibold text-lg mb-3">Select Material</h2>
+
+      <select class="w-full border border-gray-300 rounded-lg p-2 mb-3">
+        <option>ASTM A572 GR50</option>
+      </select>
+
+      <div class="flex justify-between mb-4">
+        <div>Fy (kN/cm²): <b>34.5</b></div>
+        <div>Fu (kN/cm²): <b>45</b></div>
+      </div>
+
+      <!-- Unbraced Lengths -->
+      <h2 class="font-semibold text-lg mt-6 mb-2">Unbraced Lengths</h2>
+
+      <input
+        type="text"
+        placeholder="Lx (cm)"
+        class="w-full border p-2 rounded-lg mb-2"
+      />
+      <input
+        type="text"
+        placeholder="Ly (cm)"
+        class="w-full border p-2 rounded-lg mb-2"
+      />
+      <input
+        type="text"
+        placeholder="Lt (cm)"
+        class="w-full border p-2 rounded-lg mb-2"
+      />
+
+      <div class="flex gap-2 mb-2">
+        <span class="mt-2">Cb:</span>
+        <input type="number" value="1" class="border p-2 rounded-lg w-20" />
+      </div>
+
+      <input
+        type="text"
+        placeholder="Distance between stiffeners a (mm) – 0 for none"
+        class="w-full border p-2 rounded-lg mb-4"
+      />
+
+      <!-- Loads -->
+      <h2 class="font-semibold text-lg mb-2">Loads</h2>
+
+      <input
+        type="text"
+        placeholder="NtSd (kN)"
+        class="w-full border p-2 rounded-lg mb-2"
+      />
+      <input
+        type="text"
+        placeholder="NcSd (kN)"
+        class="w-full border p-2 rounded-lg mb-2"
+      />
+      <input
+        type="text"
+        placeholder="MxSd (kN·cm)"
+        class="w-full border p-2 rounded-lg mb-2"
+      />
+      <input
+        type="text"
+        placeholder="MySd (kN·cm)"
+        class="w-full border p-2 rounded-lg mb-2"
+      />
+      <input
+        type="text"
+        placeholder="VxSd (kN)"
+        class="w-full border p-2 rounded-lg mb-2"
+      />
+      <input
+        type="text"
+        placeholder="VySd (kN)"
+        class="w-full border p-2 rounded-lg mb-4"
+      />
+
+      <!-- Buttons -->
+      <div class="flex gap-3">
+        <button
+          class="flex-1 bg-green-600 text-white p-2 rounded-lg hover:bg-green-700"
+        >
+          Calculate
+        </button>
+
+        <button
+          class="flex-1 bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700"
+        >
+          List Profiles
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
